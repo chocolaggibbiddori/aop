@@ -3,6 +3,7 @@ package hello.aop;
 import hello.aop.order.OrderRepository;
 import hello.aop.order.OrderService;
 import hello.aop.order.aop.AspectV3;
+import hello.aop.order.aop.AspectV4Pointcut;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.aop.support.AopUtils;
@@ -14,7 +15,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 @Slf4j
 @SpringBootTest
-@Import(AspectV3.class)
+@Import(AspectV4Pointcut.class)
 public class AopTest {
 
     @Autowired
